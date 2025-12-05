@@ -43,9 +43,14 @@ def calc_cost(response):
     return f"💰 {total} tokens (R$ {custo_brl:.6f})"
 
 # --- INICIALIZAÇÃO DO CHAT ---
-def iniciar_chat(model_name):
+def iniciar_chat(model_name, usar_memoria=False):
     genai.configure(api_key=API_KEY)
-    historico = charge_memory()
+    if usar_memoria:
+        historico = charge_memory()
+        print(f"Carregando {len(historico)} mensagens antigas.")
+    else:
+        historico = [] # Começa vazio
+        print("Iniciando chat limpo (Modo Econômico).")
     
     rules = """
     ROLE: Você é Y (Ípsilon), uma IA especialista em Engenharia de Software e Python, criada por Victor Araujo Ferreira da Silva.
