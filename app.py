@@ -4,7 +4,8 @@ import Backend
 # Configuração da página
 st.set_page_config(page_title="Y - Assistente", page_icon="🤖")
 
-st.title("🤖 Y (Ípsilon)")
+st.title("🤖 Y")
+st.caption("Olá! Sou o Assistente Pessoal do Victor, Como Posso Ajudar?")
 
 # --- BARRA LATERAL ---
 with st.sidebar:
