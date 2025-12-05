@@ -10,7 +10,7 @@ st.set_page_config(
 
 # Título na tela
 st.title("🤖 Y (Ípsilon)")
-st.caption("Assistente Pessoal do Victor - Powered by Gemini")
+st.caption("Assistente Pessoal do Victor")
 
 # 2. Barra Lateral (Configurações)
 with st.sidebar:
