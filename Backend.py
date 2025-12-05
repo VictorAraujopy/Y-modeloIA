@@ -45,6 +45,7 @@ def calc_cost(response):
 # --- INICIALIZAÇÃO DO CHAT ---
 def iniciar_chat(model_name, usar_memoria=False):
     genai.configure(api_key=API_KEY)
+    
     if usar_memoria:
         historico = charge_memory()
         print(f"Carregando {len(historico)} mensagens antigas.")
